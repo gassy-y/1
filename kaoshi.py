@@ -50,5 +50,14 @@
 隐藏层2：5个节点，使用relu激活函数
 输出层：10个节点，使用softmax激活函数，输出10个类别的概率分布
 2.轮数改为6的语句行：
-model.fit(x_train, y_train, epochs = 6)
+x=[[],[]]
+y=[]
+from skllearn.linear_model importLinearRegression
+model=LinearRegression()
+model.fit(x,y)
+k=round(model.coef_[0]，2)
+b=round(model.intercept_,2)print('y=',k,'x+',b)
+x1=[[8]]
+y_pre=model.predict(x1)
+print(y_pre)
 """
